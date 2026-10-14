@@ -1,0 +1,29 @@
+class book:
+    def __init__(self,Bookname,author):
+        self.Bookname = Bookname
+        self.author = author
+        self.is_borrowed = False
+
+    def borrow(self):
+        if not self.is_borrowed:
+            self.is_borrowed = True
+            print(f"{self.Bookname} written by {self.author}")
+        else:
+            print("Sorry ",self.Bookname,"is not available ")
+
+    def return_books(self):
+        if self.is_borrowed:
+            self.is_borrowed = False
+            print("The book ",self.Bookname,"by ",self.author,"Has been returned")
+        else:
+            print("Error! item was not returned ")
+
+book1 = book("don quixote ","george owell")
+book2 = book("THe little prince","Antoine de Saint-Exupéry")
+book3 = book("Harry potter ","JK ROWLING ")
+
+book1.borrow()
+book1.borrow()
+book1.return_books()
+book2.borrow
+book3.borrow
